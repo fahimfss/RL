@@ -14,10 +14,10 @@ The player must avoid the meteors or the game ends. The player's score is increa
 GIF: A human player playing Meteors. 
 A more accurate representation (mp4) of the game can be found [here](https://github.com/fahimfss/RL/blob/master/DQN/MeteorGame/gifs_vids/run_human.mp4).
 
-### Why Create A Game And Not Use OpenAI GYM environments
+### Why Create a New Game and Not Use OpenAI GYM Environments
 Mainly for these reasons: 
 * I wanted to learn how custom environments can be created for RL
-* Most of the DQN based implementations out there already use OpenAI GYM environments. I wanted to see how those implementation works in a custom environment
+* Most of the DQN based implementations out there already use OpenAI GYM environments. I wanted to see how those implementations work in a custom environment
 * Lastly, an RL agent that can play Meteors is a good first step. But ultimately, I want to create an RL agent that is able to generate the game (i.e. throw the meteors) 
 so that a human player can play against it.   
 
@@ -27,18 +27,72 @@ so that a human player can play against it.
 The agent gets (+1 * scale) reward for each meteor that goes out of the screen. If a meteor hits the rocket-ship, the agent gets (-100 * scale) reward. 
 The value of scale is set as (1/20). 
   
-An episode is started with the rocket-ship on the left part of the screen and with no meteors on screen. The episode is concluded when a meteor hits the rocket-ship.
+An episode is started with the rocket-ship on the left part of the screen and with no meteors on screen. The episode concludes when a meteor hits the rocket-ship.
 
 ### State
 A frame is a processed snapshot of the game at a particular time. A state consists of 4 frames. In the meteors environment, 
 the same action is performed on 3 consecutive frames (skipped). 
 
 ### Action
-The agent can perform 9 actions. 8 of the actions relate to moving in 8 directions (i.e. Up, Up-Left, Left, Left-Down, Down ...). Last action is actually not moving at all.
+The agent can perform 9 actions. 8 of the actions are related to moving in 8 directions (i.e. Up, Up-Left, Left, Left-Down, Down ...). The last action is actually not moving at all.
+
+### Training Environment
+The training was not done in the arcade environment actually. 
+I created a new training environment where the states are created by copying the sprite (rocket-ship and meteors) pngs on the background png. 
+I used the super-fast [pillow-simd](https://github.com/uploadcare/pillow-simd) for this purpose. This approach solved the problem of 
+run-time error that I was having while training in the arcade environment and also made training significantly faster.
+
+### Training Machine
+I trained the RL agent in a laptop containing the Intel® Core™ i7-7700HQ CPU, GeForce GTX 1060 GPU, and 16GB of RAM.
+
+## The Deep Q-Learning Algorithm 
+The Deep Q-Learning Algorithm  algorithm that I used in this project is based on the codes in Chapter 6 and 8 of the book Deep Reinforcement Learning Hands-On, Second Edition 
+([github](https://github.com/PacktPublishing/Deep-Reinforcement-Learning-Hands-On-Second-Edition)). I made a few significant changes in the approach described 
+there. Let's discuss those one by one.
+
+#### Learning Rate
+I found that the most important hyperparameter was the learning rate. Setting it to a wrong value made the model learn nothing at all or rewards crashing
+unexpectedly. I set the initial value of the learning rate to 10<sup>-4</sup> which gradually came down to 10<sup>-6</sup> after 1 million frames and stayed
+at that value for the rest of the training.
+
+#### Gamma (Discount)
+Gamma was set to 0.995 so that the agent cares about the very distant future. 
+
+#### Replay Buffer Size
+Replay buffer size was set to 80000. This was limited by the available RAM in my machine.
+
+#### Syncing target network
+The Deep Q-Learning Algorithm uses bootstrapping to get the value of the next state. Here, a target network is used for estimating the value of the next state to make learning more stable. The learned parameters of the dqn network are copied to the target network every 20k frames.
+
+#### Epsilon Decay
+The Deep Q-Learning Algorithm uses the epsilon greedy policy. The starting value of epsilon is 1.00 which gradually comes down to 0.01 after 300k frames.
+
+#### Gradient Ascent
+I performed the gradient ascent of the DQN every 4 frames rather than every frame. This significantly improved the training time and made learning more stable.
+
+#### Dueling Network Architecture
+The DQN outputs the action value for each action for a given state. The [dueling network architecture](https://arxiv.org/abs/1511.06581) uses two separate estimators: one for the state value function and one for the state-dependent action advantage function. The dueling architecture was able to produce better results compared to the DQN architecture. 
+
+#### Training termination criteria 
+The training is set to terminate once 2.5 Million frames are reached or an average reward of 20 (score 300 in the actual game) in the last 100 games is reached. 
 
 
-## The Learning Algorithm
+### Result
+The best agent that I trained was able to reach the average reward of 16.54 in the last 100 games.
+![](https://github.com/fahimfss/RL/blob/master/DQN/Results.png?raw=true)
 
+Here's a glimpse of the trained agent playing meteors:
+![](https://github.com/fahimfss/RL/blob/master/DQN/MeteorGame/gifs_vids/run_ai.gif?raw=true)
 
+In the full episode, the agent scores 536 points! The full episode can be found [here](https://github.com/fahimfss/RL/blob/master/DQN/MeteorGame/gifs_vids/run_ai.mp4).
 
+### Issues
+#### Hardware limitations
+I trained the agent using a laptop that worked for single-agent training but I could not train multiple agents with different hyperparameters simultaneously. Also, it took me about an hour to get the result of changing a hyperparameter value. These limitations slowed me down a lot.
 
+#### N-Step Q-Learning, Noisy Networks and Prioritized Replay Buffer did not work
+These approaches made significant improvements to DQN, but I was not able to get these to work in my project. The reason might be errors in implementation / wrong hyperparameters / those approaches might not be suitable for my problem. The tensorboard logs of all the things I tried can be found [here](https://github.com/fahimfss/RL/tree/master/DQN/DQN_Dueling/log/tensorboard).
+
+## Conclusion
+In this project, I was able to create a new game environment called Meteors and an RL agent that is capable of playing it with very high efficiency. 
+For the future, I want to create an RL agent (using policy gradient method) that is able to generate the states of the Meteors game so that a human player can play against it. 
