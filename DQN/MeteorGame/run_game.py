@@ -11,9 +11,9 @@ MODE_AI_ARCADE = 0
 MODE_AI_IMG = 1
 MODE_HUMAN = 2
 
-MODEL = 'best_9.dat'
+MODEL = 'best_16.dat'
 SAVE_IMG = True
-RUN_MODE = MODE_HUMAN
+RUN_MODE = MODE_AI_ARCADE
 
 if RUN_MODE == MODE_AI_IMG:
     mi = MeteorImg(model_path=MODEL, train_mode=False, save_img=SAVE_IMG)

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9b0f1409-84dc-4213-b8cd-8cf291ee3f58" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="JupyterTrust" id="e180abf9-433d-494d-95dc-fe6cffa4af22" />
+  <component name="ProjectId" id="1hJS8aqaH4EP6z6LfuYCDpeI1R7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MeteorGame/temp" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.run_game">
+    <configuration name="dqn" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DQN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DQN_Dueling" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DQN_Dueling/dqn.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="rename" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DQN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MeteorGame/temp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MeteorGame/temp/rename.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="run_game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DQN" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/MeteorGame" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MeteorGame/run_game.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.run_game" />
+        <item itemvalue="Python.rename" />
+        <item itemvalue="Python.dqn" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b0f1409-84dc-4213-b8cd-8cf291ee3f58" name="Default Changelist" comment="" />
+      <created>1599727544190</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599727544190</updated>
+      <workItem from="1599727545321" duration="9041000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1802" height="334" key="GridCell.Tab.0.bottom" timestamp="1599741231237">
+      <screen x="72" y="41" width="1848" height="1039" />
+    </state>
+    <state width="1802" height="334" key="GridCell.Tab.0.bottom/72.41.1848.1039@72.41.1848.1039" timestamp="1599741231237" />
+    <state width="1802" height="334" key="GridCell.Tab.0.center" timestamp="1599741231237">
+      <screen x="72" y="41" width="1848" height="1039" />
+    </state>
+    <state width="1802" height="334" key="GridCell.Tab.0.center/72.41.1848.1039@72.41.1848.1039" timestamp="1599741231237" />
+    <state width="1802" height="334" key="GridCell.Tab.0.left" timestamp="1599741231236">
+      <screen x="72" y="41" width="1848" height="1039" />
+    </state>
+    <state width="1802" height="334" key="GridCell.Tab.0.left/72.41.1848.1039@72.41.1848.1039" timestamp="1599741231236" />
+    <state width="1802" height="334" key="GridCell.Tab.0.right" timestamp="1599741231237">
+      <screen x="72" y="41" width="1848" height="1039" />
+    </state>
+    <state width="1802" height="334" key="GridCell.Tab.0.right/72.41.1848.1039@72.41.1848.1039" timestamp="1599741231237" />
+    <state width="1802" height="334" key="GridCell.Tab.1.bottom" timestamp="1599741231238">
+      <screen x="72" y="41" width="1848" height="1039" />
+    </state>
+    <state width="1802" height="334" key="GridCell.Tab.1.bottom/72.41.1848.1039@72.41.1848.1039" timestamp="1599741231238" />
+    <state width="1802" height="334" key="GridCell.Tab.1.center" timestamp="1599741231237">
+      <screen x="72" y="41" width="1848" height="1039" />
+    </state>
+    <state width="1802" height="334" key="GridCell.Tab.1.center/72.41.1848.1039@72.41.1848.1039" timestamp="1599741231237" />
+    <state width="1802" height="334" key="GridCell.Tab.1.left" timestamp="1599741231237">
+      <screen x="72" y="41" width="1848" height="1039" />
+    </state>
+    <state width="1802" height="334" key="GridCell.Tab.1.left/72.41.1848.1039@72.41.1848.1039" timestamp="1599741231237" />
+    <state width="1802" height="334" key="GridCell.Tab.1.right" timestamp="1599741231237">
+      <screen x="72" y="41" width="1848" height="1039" />
+    </state>
+    <state width="1802" height="334" key="GridCell.Tab.1.right/72.41.1848.1039@72.41.1848.1039" timestamp="1599741231237" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/DQN$run_game.coverage" NAME="run_game Coverage Results" MODIFIED="1599736157063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MeteorGame" />
+    <SUITE FILE_PATH="coverage/DQN$rename.coverage" NAME="rename Coverage Results" MODIFIED="1599733808785" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MeteorGame/temp" />
+    <SUITE FILE_PATH="coverage/DQN$dqn.coverage" NAME="dqn Coverage Results" MODIFIED="1599727580402" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN_Dueling" />
+  </component>
+</project>
