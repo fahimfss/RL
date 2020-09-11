@@ -37,7 +37,7 @@ the same action is performed on 3 consecutive frames (skipped).
 The agent can perform 9 actions. 8 of the actions are related to moving in 8 directions (i.e. Up, Up-Left, Left, Left-Down, Down ...). The last action is actually not moving at all.
 
 ### Training Environment
-The training was not done in the arcade environment actually. 
+Actually the training was not done in the arcade environment. 
 I created a new training environment where the states are created by copying the sprite (rocket-ship and meteors) pngs on the background png. 
 I used the super-fast [pillow-simd](https://github.com/uploadcare/pillow-simd) for this purpose. This approach solved the problem of 
 run-time error that I was having while training in the arcade environment and also made training significantly faster.
