@@ -1,4 +1,4 @@
-# Meteors and DQN
+# Meteors and Deep Q-Learning
 
 ### Overview
 In this project, I created an RL agent that is able to play the game Meteors. I used Deep Q-Learning in this project. 
