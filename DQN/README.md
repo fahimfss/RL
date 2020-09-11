@@ -74,16 +74,17 @@ I performed the gradient ascent of the DQN every 4 frames rather than every fram
 The DQN outputs the action value for each action for a given state. The [dueling network architecture](https://arxiv.org/abs/1511.06581) uses two separate estimators: one for the state value function and one for the state-dependent action advantage function. The dueling architecture was able to produce better results compared to the DQN architecture. 
 
 #### Training termination criteria 
-The training is set to terminate once 2.5 Million frames are reached or an average reward of 20 (score 300 in the actual game) in the last 100 games is reached. 
+The training is set to terminate once 2.5 Million frames are reached or an average reward of 20 (score 500 in the actual game) in the last 100 games is reached. 
 
 
 ### Result
-The best agent that I trained was able to reach the average reward of 16.54 in the last 100 games.
+The best agent that I trained was able to reach the average reward of 16.5 (score 430 in the actual game) in the last 100 games.
 ![](https://github.com/fahimfss/RL/blob/master/DQN/Results.png?raw=true)
 
 Here's a glimpse of the trained agent playing meteors:
-![](https://github.com/fahimfss/RL/blob/master/DQN/MeteorGame/gifs_vids/run_ai.gif?raw=true)
 
+![](https://github.com/fahimfss/RL/blob/master/DQN/MeteorGame/gifs_vids/run_ai.gif?raw=true)
+  
 In the full episode, the agent scores 536 points! The full episode can be found [here](https://github.com/fahimfss/RL/blob/master/DQN/MeteorGame/gifs_vids/run_ai.mp4).
 
 ### Issues
