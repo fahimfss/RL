@@ -19,8 +19,7 @@ priorities. This class can provide sample experiences based on their priorities,
 ## Running the Project
 #### To Train the Agent
 To train the agent, all the files and folders mentioned in the **Project Files**, should be saved in a directory. Then the **navigation_sovler.py** file should 
-be run using a python 3 interpreter.  
-Two things to note while running the project for training:
+be run using a python 3 interpreter. Two things to note while running the project for training:
 - The **navigation_sovler.py** assumes that the Unity ML-Agents Banana Collector environment is in the same directory as itself. The location of the 
 Banana Collector environment directory can be updated in line no 20 of the **navigation_sovler.py** file. 
 The Banana Collector environment is not included in this github project.
