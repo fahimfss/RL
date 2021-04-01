@@ -16,7 +16,7 @@ priorities. This class can provide sample experiences based on their priorities,
 - **checkpoints:** This folder contains saved models of different runs
 <br/>
 
-## To Run the Project
+## Running the Project
 #### To Train the Agent
 To train the agent, all the files and folders mentioned in the **Project Files**, should be saved in a directory. Then the **navigation_sovler.py** file should 
 be run using a python 3 interpreter.  
@@ -26,3 +26,8 @@ Banana Collector environment directory can be updated in line no 20 of the **nav
 The Banana Collector environment is not included in this github project.
 - The RUN_NAME (line 17 of **navigation_sovler.py**) corresponds to a specific run, and creates a tensordboard graph and checkpoint file with the given value.
 Different runs should have different RUN_NAME values.
+
+#### To Run a Trained Agent
+Trained agents (network state dictionaries) are stored in the checkpoints folder, containing the name ***RUN_NAME***.pth. Trained means the agent achieved 
+average points of 14 over the last 100 episodes in the Banana Collector environment. The checkpoints folder contains three trained agents: Test1.pth, Test2.pth, Test3.pth.
+To run a trained agent, update the RUN_NAME in the **run.py** file (line 13) and run the **run.py** file using a python 3 interpreter.
