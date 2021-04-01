@@ -22,7 +22,7 @@ To train the agent, all the files and folders mentioned in the **Project Files**
 be run using a python 3 interpreter. Two things to note while running the project for training:
 - The **navigation_sovler.py** assumes that the Unity ML-Agents Banana Collector environment is in the same directory as itself. The location of the 
 Banana Collector environment directory can be updated in line no 20 of the **navigation_sovler.py** file. 
-The Banana Collector environment is not included in this github project.
+The Banana Collector environment folder is not included in this github project.
 - The RUN_NAME (line 17 of **navigation_sovler.py**) corresponds to a specific run, and creates a tensordboard graph and checkpoint file with the given value.
 Different runs should have different RUN_NAME values.
 
