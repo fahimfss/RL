@@ -30,3 +30,5 @@ Different runs should have different RUN_NAME values.
 Trained agents (network state dictionaries) are stored in the checkpoints folder, containing the name ***RUN_NAME***.pth. Trained means the agent achieved 
 average points of 14 over the last 100 episodes in the Banana Collector environment. The checkpoints folder contains three trained agents: Test1.pth, Test2.pth, Test3.pth.
 To run a trained agent, update the RUN_NAME in the **run.py** file (line 13) and run the **run.py** file using a python 3 interpreter.
+
+
