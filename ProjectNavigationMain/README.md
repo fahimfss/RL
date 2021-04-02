@@ -26,15 +26,14 @@ The player, which is represented by the RL agent, can perform 4 actions: 0: move
 The agent gets +1 points for each yellow banana collected. A banana is collected when the agent moves over it.  
 **Agent's goal**  
 The agent's goal is to maximize the number of yellow bananas collected in each episode. In this project, the environment is considered solved, when the agent is capable 
-of collecting 14 bananas on average for the last 100 episodes.  
-<br/>   
-   
-
+of collecting 14 bananas on average for the last 100 episodes.
+<br/>  
+  
 ## Getting Started
 - The following python libraries are required to run the project: pytorch, numpy, tensorboardx and unityagents
 - The Banana Collector environment folder is not included in this github project, but can be found [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip).
-<br/>
-  
+<br/>  
+   
 ## Instructions
 #### To Train the Agent
 To train the agent, all the files and folders mentioned in the **Project Files**, should be saved in a directory. Then the **navigation_sovler.py** file should 
@@ -48,7 +47,7 @@ Different runs should have different RUN_NAME values.
 Trained agents (network state dictionaries) are stored in the checkpoints folder, containing the name ***RUN_NAME***.pth. Trained means the agent achieved 
 average points of 14 over the last 100 episodes in the Banana Collector environment. The checkpoints folder contains three trained agents: Test1.pth, Test2.pth, Test3.pth.
 To run a trained agent, update the RUN_NAME in the **run.py** file (line 13) and run the **run.py** file using a python 3 interpreter.
-<br/>
-    
+<br/>  
+  
 ## Results
 Please check the [report](https://github.com/fahimfss/RL/blob/master/ProjectNavigationMain/REPORT.md) file for the implementation and result details.
