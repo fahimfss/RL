@@ -16,13 +16,16 @@ priorities. This class can provide sample experiences based on their priorities,
 - **checkpoints:** This folder contains saved models of different runs
 <br/>
 
-## Running the Project
+## Getting Started
+- The following python libraries are required to run the project: pytorch, numpy, tensorboardx and unityagents
+- The Banana Collector environment folder is not included in this github project, but can be found [here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip).
+
+## Instructions
 #### To Train the Agent
 To train the agent, all the files and folders mentioned in the **Project Files**, should be saved in a directory. Then the **navigation_sovler.py** file should 
 be run using a python 3 interpreter. Two things to note while running the project for training:
 - The **navigation_sovler.py** assumes that the Unity ML-Agents Banana Collector environment is in the same directory as itself. The location of the 
 Banana Collector environment directory can be updated in line no 20 of the **navigation_sovler.py** file. 
-The Banana Collector environment folder is not included in this github project.
 - The RUN_NAME (line 17 of **navigation_sovler.py**) corresponds to a specific run, and creates a tensordboard graph and checkpoint file with the given value.
 Different runs should have different RUN_NAME values.
 
@@ -31,4 +34,17 @@ Trained agents (network state dictionaries) are stored in the checkpoints folder
 average points of 14 over the last 100 episodes in the Banana Collector environment. The checkpoints folder contains three trained agents: Test1.pth, Test2.pth, Test3.pth.
 To run a trained agent, update the RUN_NAME in the **run.py** file (line 13) and run the **run.py** file using a python 3 interpreter.
 
+
+## Project Overview
+Every RL project should have well-defined state, action and reward spaces. For this project the state, action and reward spaces are described below:  
+**State-space**  
+The environment is a 3D world created using Unity. The environment consists of a moveable player, a fenced field and a lot of bananas. State-space is an array representation
+of the environment consisting of 37 floating-point values.  
+**Action-space**  
+The player, which is represented by the RL agent, can perform 4 actions: 0: move forward, 1: move backward, 2: turn left, 3: turn right.  
+**Reward-space**  
+The agent gets +1 points for each yellow banana collected. A banana is collected when the agent moves over it.  
+**Agent's goal**  
+The agent's goal is to maximize the number of yellow bananas collected in each episode. In this project, the environment is considered solved, when the agent is capable 
+of collecting 14 bananas on average for the last 100 episodes.
 
