@@ -7,8 +7,8 @@
 #### Project Files
 - **navigation_sovler.py:**  This file contains the dqn() method which is used to train the RL agent  
 - **agent.py:**  This file contains the Agent class, which is responsible for interacting with the environment, 
-store interactions in memory and train the deep neural network.
-- **model.py:** This file contains the dueling deep neural network architecture used by the agent.
+store experiences in memory and train the Deep Neural Network for state-action value prediction.
+- **model.py:** This file contains the Dueling Deep Neural Network architecture used by the agent.
 - **experience_replay.py:** This file contains the PrioritizedExperienceBuffer class, which stores experiences with 
 priorities. This class can provide sample experiences based on their priorities, to train the agent
 - **run.py:** This file can run a trained Agent on the Banana Collector environment 
@@ -17,7 +17,7 @@ priorities. This class can provide sample experiences based on their priorities,
 <br/>
 
 Every RL project should have well-defined state, action and reward spaces. For this project the state, action and reward spaces are described below:  
-- **State-space:** The environment is a 3D world created using Unity. The environment consists of a moveable player, a fenced field and a lot of bananas. State-space is an array representation
+- **State-space:** The Banana Collector environment is a 3D world created using Unity. The environment consists of a moveable player, a fenced field and a lot of bananas. State-space is an array representation
 of the environment consisting of 37 floating-point values.  
 - **Action-space:** The player, which is represented by the RL agent, can perform 4 actions: 0: move forward, 1: move backward, 2: turn left, 3: turn right.  
 - **Reward-space:** The agent gets +1 points for each yellow banana collected. A banana is collected when the agent moves over it.  
