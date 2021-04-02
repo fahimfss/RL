@@ -1,6 +1,6 @@
 # Report on Project Navigation
 
-## Overview of the Algorithm Used
+## Overview of the Algorithm
 
 In this project, I used the Deep Q-Learning Algorithm with Dueling Network Architectures, Double Q-learning and Prioritized Experience Replay, for solving the Unity Banana Collector environment.  
 
@@ -9,8 +9,8 @@ The training of the agent takes place in the dqn() method of the [navigation_sov
 - Then, an agent object is created which is responsible for selecting an action based on the current state. In Deep Q-Learning, the agent uses a Deep Neural Network for action selection. The DNN predicts the Q values for all actions, given a state and usually, the action with the highest Q value is selected. In this project, the agent codes are written in the Agent class [(agent.py)](https://github.com/fahimfss/RL/blob/master/ProjectNavigationMain/agent.py) and the DNN codes are written in the DuelingQNetwork class [(model.py)](https://github.com/fahimfss/RL/blob/master/ProjectNavigationMain/model.py)
 - The agent picks an action based on the current state provided by the environment. Based on the action, the environment provides next-state, reward, and done values. This process is repeated for a very long time. 
 - To choose better actions, the agent needs to learn by using the values provided by the environment. Instead of learning directly from the environment outputs (called **experience**), the agent stores those experiences in a buffer called the replay buffer and samples experiences from the buffer regularly for the learning purpose. Using a buffer has benefits like unbiased sampling (which would not be possible if the agent used experiences directly) and a single experience can be used multiple times. The agent uses an object of the class PrioritizedExperienceBuffer [(experience_replay.py)](https://github.com/fahimfss/RL/blob/master/ProjectNavigationMain/experience_replay.py) for storing experiences.
-- For learning, the agent takes some sample experiences from the replay buffer. Then calculates the target q values using those samples. To calculate the target q values, the agent uses the immediate reward, which the sample experience contains and the next-state values. Amazingly, the next-state value is calculated using a similar DNN, which chooses the action. The more the agent trains, the values predicted by the neural networks get better. For that, the training also improves because now the agent is using better prediction for training. 
-- After reaching training to a certain level (in this environment, when the average reward reaches the value 14 for the last 100 episodes), the training is concluded. 
+- For learning, the agent picks sample experiences from the replay buffer. Then calculates the target Q values using those samples. To calculate the target Q values, the agent uses the immediate reward, which sample experiences contains and the next-state values. Amazingly, the next-state values are calculated using a DNN, similar to the DNN which chooses the action. The more the agent trains, the values predicted by the DNNs get better. For that, the training also improves because now the agent is using better predictions for training. 
+- After the training reaches a certain level (in this environment, when the mean reward reaches the value 14 for the last 100 episodes), the training is finished.
 
 #### Hyperparameters
 **dqn() ([navigation_sovler.py](https://github.com/fahimfss/RL/blob/master/ProjectNavigationMain/navigation_sovler.py)):** state_size=37, action_size=4, n_episodes=2000, max_t=500, eps_start=1.0, eps_end=0.01, eps_decay=0.995  
