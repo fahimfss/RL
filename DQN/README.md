@@ -84,10 +84,10 @@ The best agent that I trained was able to reach the average reward of 16.5 (scor
 ![](https://github.com/fahimfss/RL/blob/master/DQN/Results.png?raw=true)
 
 
-<details><summary><b>Click to see the trained agent playing meteors</b></summary>
+<b>Watch the trained agent playing meteors</b>
   
 ![](https://github.com/fahimfss/RL/blob/master/DQN/MeteorGame/gifs_vids/run_ai.gif?raw=true)
-</details>
+
   
 In the full episode, the agent scores 536 points! The full episode can be found [here](https://github.com/fahimfss/RL/blob/master/DQN/MeteorGame/gifs_vids/run_ai.mp4).
 
